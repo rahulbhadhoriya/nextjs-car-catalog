@@ -18,11 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
+      <GoogleAnalytics gaId="G-TEMZC9BP9L" />
         <Navbar/>
         {children}
-        <Footer/>
+        <Footer />
       </body>
-      <GoogleAnalytics gaId="G-TEMZC9BP9L" />
     </html>
   )
 }
