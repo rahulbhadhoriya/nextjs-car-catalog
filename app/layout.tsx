@@ -2,7 +2,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Navbar, Footer } from '@/components'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
         {children}
         <Footer/>
       </body>
-      <GoogleTagManager gtmId="G-TEMZC9BP9L" />
+      <GoogleAnalytics gaId="G-TEMZC9BP9L" />
     </html>
   )
 }
