@@ -1,14 +1,22 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { CustomButton } from '.'
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const Hero = () => {
 
     const handleScroll = () => {
 
+  }
+  
+  useEffect(() => {
+      console.log('%ci am called many times blocking the main theard', 'color: blue')
+    for (let i = 0; i < 20; i++){
+      sendGTMEvent({ event : 'page loaded', value : `${i} times`})
     }
+  })
 
   return (
     <div className='hero' >
