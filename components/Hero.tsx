@@ -14,7 +14,7 @@ const Hero = () => {
   useEffect(() => {
       console.log('%ci am called many times blocking the main theard', 'color: blue')
     for (let i = 0; i < 2000; i++){
-      sendGAEvent({ event : 'page loaded', value : `${i} times`})
+      sendGAEvent({ event : 'page_loaded', value : `${i} times`})
     }
   })
 
